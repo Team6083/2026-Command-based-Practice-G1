@@ -17,6 +17,6 @@ public final class Constants {
     public static final int climberLimitSwitch = 0;
   }
   public static final class XboxController {
-    public static final int XboxController = 0;
+    public static final int XboxControllerPort = 0;
   }
 }

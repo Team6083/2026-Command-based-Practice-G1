@@ -9,20 +9,20 @@ import edu.wpi.first.wpilibj2.command.Commands;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import frc.robot.commands.TankCmd;
 import frc.robot.subsystems.TankSubsystem;
+import frc.robot.Constants.XboxController;
 
 public class RobotContainer {
   TankCmd tankcmd;
   TankSubsystem tanksubsystem;
-  CommandXboxController joy;
+  CommandXboxController controller;
   public RobotContainer() {
-    joy = new CommandXboxController(0);
+    controller = new CommandXboxController(XboxController.XboxControllerPort);
     tanksubsystem = new TankSubsystem();
-    tankcmd = new TankCmd(tanksubsystem);
     configureBindings();
   }
 
   private void configureBindings() {
-    joy.a().onTrue(tankcmd);
+    controller.a().onTrue(tankcmd);
   }
 
   public Command getAutonomousCommand() {
