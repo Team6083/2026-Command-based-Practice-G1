@@ -7,17 +7,16 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import frc.robot.subsystems.TankSubsystem;
-
+import frc.robot.Constants.XboxController;
 /* You should consider using the more terse Command factories API instead https://docs.wpilib.org/en/stable/docs/software/commandbased/organizing-command-based.html#defining-commands */
 public class TankCmd extends Command {
   private TankSubsystem tankSubsystem;
-  CommandXboxController joy = new CommandXboxController(0);
+  CommandXboxController joy = new CommandXboxController(XboxController.XboxController); // Replace 0 with the appropriate port number
 
   public TankCmd(TankSubsystem tankSubsystem) {
     this.tankSubsystem = tankSubsystem;
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(tankSubsystem);
-
   }
 
   // Called when the command is initially scheduled.
@@ -27,8 +26,7 @@ public class TankCmd extends Command {
   @Override
   public void execute() {
     // Example usage of tankSubsystem
-
-    tankSubsystem.TankSpeed(joy.getLeftY(), joy.getRightY()); // Replace with actual logic
+    tankSubsystem.setTankSpeed(joy.getLeftY(), joy.getRightY()); // Replace with actual logic
   }
 
   // Called once the command ends or is interrupted.

@@ -19,7 +19,7 @@ public class TankSubsystem extends SubsystemBase {
   /** Creates a new TankSubsystem. */
   public TankSubsystem() {}
   
-  public void TankSpeed(double leftSpeed, double rightSpeed){
+  public void setTankSpeed(double leftSpeed, double rightSpeed){
     lMotor1.set(com.ctre.phoenix.motorcontrol.ControlMode.PercentOutput, leftSpeed);
     lMotor2.set(com.ctre.phoenix.motorcontrol.ControlMode.PercentOutput, leftSpeed);
     rMotor1.set(com.ctre.phoenix.motorcontrol.ControlMode.PercentOutput, rightSpeed);
