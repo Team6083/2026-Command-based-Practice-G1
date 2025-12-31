@@ -8,14 +8,14 @@ import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-import frc.robot.Constants.tankConstants;
+import frc.robot.Constants.TankConstants;
 
 public class TankSubsystem extends SubsystemBase {
 
-  VictorSPX lMotor1 = new VictorSPX(tankConstants.leftMotorSPX);
-  TalonSRX lMotor2 = new TalonSRX(tankConstants.leftMotorSRX);
-  VictorSPX rMotor1 = new VictorSPX(tankConstants.rightMotorSPX);
-  TalonSRX rMotor2 = new TalonSRX(tankConstants.rightMotorSRX);
+  VictorSPX lMotor1 = new VictorSPX(TankConstants.leftMotorSPX);
+  TalonSRX lMotor2 = new TalonSRX(TankConstants.leftMotorSRX);
+  VictorSPX rMotor1 = new VictorSPX(TankConstants.rightMotorSPX);
+  TalonSRX rMotor2 = new TalonSRX(TankConstants.rightMotorSRX);
 
   /** Creates a new TankSubsystem. */
   public TankSubsystem() {
