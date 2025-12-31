@@ -12,7 +12,7 @@ import frc.robot.Constants.tankConstants;
 
 public class TankSubsystem extends SubsystemBase {
 
-  VictorSPX lMotor1 = new VictorSPX(tankConstants.leftMotorSRX);
+  VictorSPX lMotor1 = new VictorSPX(tankConstants.leftMotorSPX);
   TalonSRX lMotor2 = new TalonSRX(tankConstants.leftMotorSRX);
   VictorSPX rMotor1 = new VictorSPX(tankConstants.rightMotorSPX);
   TalonSRX rMotor2 = new TalonSRX(tankConstants.rightMotorSRX);

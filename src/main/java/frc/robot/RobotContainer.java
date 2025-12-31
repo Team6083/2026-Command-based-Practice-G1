@@ -22,7 +22,7 @@ public class RobotContainer {
   }
 
   private void configureBindings() {
-    controller.a().onTrue(tankcmd);
+    tanksubsystem.setDefaultCommand(new TankCmd(tanksubsystem, controller));
   }
 
   public Command getAutonomousCommand() {

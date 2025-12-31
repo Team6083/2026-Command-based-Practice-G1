@@ -4,6 +4,7 @@
 
 package frc.robot.commands;
 
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import frc.robot.subsystems.TankSubsystem;
@@ -29,7 +30,9 @@ public class TankCmd extends Command {
   @Override
   public void execute() {
     // Example usage of tankSubsystem
-    tankSubsystem.setTankSpeed(Controller.getLeftY(), Controller.getRightY()); // Replace with actual logic
+    tankSubsystem.setTankSpeed(Controller.getLeftY(), Controller.getRightY() *-1);
+    SmartDashboard.putNumber("X", Controller.getLeftY()); 
+    SmartDashboard.putNumber("Y", Controller.getRightY());// Replace with actual logic
   }
 
   // Called once the command ends or is interrupted.

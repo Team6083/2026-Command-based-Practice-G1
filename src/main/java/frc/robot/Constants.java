@@ -4,8 +4,8 @@ public final class Constants {
   public static final class tankConstants {
     public static final int leftMotorSPX  = 31;
     public static final int leftMotorSRX  = 32;
-    public static final int rightMotorSPX = 33;
-    public static final int rightMotorSRX = 34;
+    public static final int rightMotorSPX = 34;
+    public static final int rightMotorSRX = 33;
   }
   public static final class shooterConstants {
     public static final int shooterMotorSPX = 21;
