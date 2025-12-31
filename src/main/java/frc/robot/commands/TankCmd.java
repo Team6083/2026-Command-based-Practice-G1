@@ -30,8 +30,8 @@ public class TankCmd extends Command {
   @Override
   public void execute() {
     // Example usage of tankSubsystem
-    tankSubsystem.setTankSpeed(Controller.getLeftY(), Controller.getRightY() *-1);
-    SmartDashboard.putNumber("X", Controller.getLeftY()); 
+    tankSubsystem.setTankSpeed(Controller.getLeftY(), Controller.getRightY() * -1);
+    SmartDashboard.putNumber("X", Controller.getLeftY());
     SmartDashboard.putNumber("Y", Controller.getRightY());// Replace with actual logic
   }
 
