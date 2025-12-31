@@ -4,28 +4,28 @@
 
 package frc.robot.subsystems;
 
-import com.ctre.phoenix.motorcontrol.can.VictorSPX;
-import com.ctre.phoenix.motorcontrol.can.TalonSRX;
-
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+import com.ctre.phoenix.motorcontrol.can.VictorSPX;
+
 import frc.robot.Constants.TankConstants;
 
 public class TankSubsystem extends SubsystemBase {
 
-  VictorSPX lMotor1 = new VictorSPX(TankConstants.leftMotorSPX);
-  TalonSRX lMotor2 = new TalonSRX(TankConstants.leftMotorSRX);
-  VictorSPX rMotor1 = new VictorSPX(TankConstants.rightMotorSPX);
-  TalonSRX rMotor2 = new TalonSRX(TankConstants.rightMotorSRX);
+  VictorSPX leftmotor1 = new VictorSPX(TankConstants.leftMotorSPX);
+  TalonSRX leftmotor2 = new TalonSRX(TankConstants.leftMotorSRX);
+  VictorSPX rightmotor1 = new VictorSPX(TankConstants.rightMotorSPX);
+  TalonSRX rightmotor2 = new TalonSRX(TankConstants.rightMotorSRX);
 
   /** Creates a new TankSubsystem. */
   public TankSubsystem() {
   }
 
   public void setTankSpeed(double leftSpeed, double rightSpeed) {
-    lMotor1.set(com.ctre.phoenix.motorcontrol.ControlMode.PercentOutput, leftSpeed);
-    lMotor2.set(com.ctre.phoenix.motorcontrol.ControlMode.PercentOutput, leftSpeed);
-    rMotor1.set(com.ctre.phoenix.motorcontrol.ControlMode.PercentOutput, rightSpeed);
-    rMotor2.set(com.ctre.phoenix.motorcontrol.ControlMode.PercentOutput, rightSpeed);
+    leftmotor1.set(com.ctre.phoenix.motorcontrol.ControlMode.PercentOutput, leftSpeed);
+    leftmotor2.set(com.ctre.phoenix.motorcontrol.ControlMode.PercentOutput, leftSpeed);
+    rightmotor1.set(com.ctre.phoenix.motorcontrol.ControlMode.PercentOutput, rightSpeed);
+    rightmotor2.set(com.ctre.phoenix.motorcontrol.ControlMode.PercentOutput, rightSpeed);
   }
 
   public void periodic() {
