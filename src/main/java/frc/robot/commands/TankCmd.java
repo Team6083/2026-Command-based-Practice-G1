@@ -32,7 +32,7 @@ public class TankCmd extends Command {
     // Example usage of tankSubsystem
     tankSubsystem.setTankSpeed(controller.getLeftY(), controller.getRightY() * -1);
     SmartDashboard.putNumber("X", controller.getLeftY());
-    SmartDashboard.putNumber("Y", controller.getRightY());// Replace with actual logic
+    SmartDashboard.putNumber("Y", controller.getRightY());
   }
 
   // Called once the command ends or is interrupted.
