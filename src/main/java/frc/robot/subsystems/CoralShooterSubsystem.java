@@ -15,14 +15,15 @@ public class CoralShooterSubsystem extends SubsystemBase {
   public CoralShooterSubsystem() {
   }
 
-  public void setShooterForword(boolean bottomPort1,double speed1) {
+  public void setShooterForword(boolean bottomPort1, double speed1) {
     if (bottomPort1) {
       coralShooterMotor.set(com.ctre.phoenix.motorcontrol.ControlMode.PercentOutput, speed1);
     } else {
       coralShooterMotor.set(com.ctre.phoenix.motorcontrol.ControlMode.PercentOutput, 0);
     }
   }
-  public void setShooterBackword(boolean bottomPort2,double speed2) {
+
+  public void setShooterBackword(boolean bottomPort2, double speed2) {
     if (bottomPort2) {
       coralShooterMotor.set(com.ctre.phoenix.motorcontrol.ControlMode.PercentOutput, speed2);
     } else {

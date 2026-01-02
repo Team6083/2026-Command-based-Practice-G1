@@ -20,6 +20,7 @@ public class climberCmd extends Command {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
+    climberSubsystem.resetEncoder();
   }
 
   // Called every time the scheduler runs while the command is scheduled.
@@ -27,6 +28,7 @@ public class climberCmd extends Command {
   public void execute() {
     climberSubsystem.ClimbersetPoint(90, 0.1);
     climberSubsystem.ClimbersetPoint(20, 0.1);
+    climberSubsystem.stopClimber();
   }
 
   // Called once the command ends or is interrupted.

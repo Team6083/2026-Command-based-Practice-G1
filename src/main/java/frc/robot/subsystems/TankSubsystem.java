@@ -16,15 +16,18 @@ public class TankSubsystem extends SubsystemBase {
   TalonSRX lMotor2 = new TalonSRX(tankConstants.leftMotorSRX);
   VictorSPX rMotor1 = new VictorSPX(tankConstants.rightMotorSPX);
   TalonSRX rMotor2 = new TalonSRX(tankConstants.rightMotorSRX);
+
   /** Creates a new TankSubsystem. */
-  public TankSubsystem() {}
-  
-  public void setTankSpeed(double leftSpeed, double rightSpeed){
+  public TankSubsystem() {
+  }
+
+  public void setTankSpeed(double leftSpeed, double rightSpeed) {
     lMotor1.set(com.ctre.phoenix.motorcontrol.ControlMode.PercentOutput, leftSpeed);
     lMotor2.set(com.ctre.phoenix.motorcontrol.ControlMode.PercentOutput, leftSpeed);
     rMotor1.set(com.ctre.phoenix.motorcontrol.ControlMode.PercentOutput, rightSpeed);
     rMotor2.set(com.ctre.phoenix.motorcontrol.ControlMode.PercentOutput, rightSpeed);
   }
+
   public void periodic() {
     // This method will be called once per scheduler run
   }
